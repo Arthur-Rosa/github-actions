@@ -14,6 +14,8 @@ do
 
     aws eks update-kubeconfig --name $cluster --region $region
 
+    aws eks list-clusters
+
     echo "##############################################################"
     echo "Arquivo caller identity"
 
