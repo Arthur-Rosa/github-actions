@@ -38,4 +38,6 @@ jobs:
       shell: bash
 
       env:
+        cluster: "eksc-inti-hmg-001"
+        region: "us-east-1"
         files: ${{ steps.changed-files.outputs.all_changed_files }}

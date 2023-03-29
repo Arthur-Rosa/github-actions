@@ -12,7 +12,7 @@ do
     echo "##############################################################"
     echo "Conectando File"
 
-    aws eks update-kubeconfig --name basic-cluster --region us-east-1
+    aws eks update-kubeconfig --name $cluster --region $region
 
     echo "##############################################################"
     echo "Arquivo caller identity"
