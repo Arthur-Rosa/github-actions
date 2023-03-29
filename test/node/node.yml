@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: basic-cluster
+  region: us-east-1
+
+managedNodeGroups:
+  - name: pipeline-node-021
+    labels: { role: workers }
+    instanceType: m5.xlarge
+    desiredCapacity: 10
+    volumeSize: 80
+    privateNetworking: true

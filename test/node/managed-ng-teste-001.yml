@@ -1,0 +1,27 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eksc-inti-hmg-001
+  region: us-east-1
+      
+managedNodeGroups:
+  - name: managed-ng-inti-teste-006
+    instanceType: c1.medium
+    minSize: 0
+    desiredCapacity: 0
+    maxSize: 0
+    availabilityZones: ["us-east-1a", "us-east-1b"]
+    volumeSize: 32
+    volumeType: gp3
+    privateNetworking: true 
+    ssh:
+      allow: true
+      publicKeyName: eksc-inti-hmg-001
+    iam:
+      withAddonPolicies:
+        externalDNS: true
+        autoScaler: true
+        albIngress: true
+        ebs: true
+        efs: true
