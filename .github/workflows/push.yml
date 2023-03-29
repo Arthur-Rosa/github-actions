@@ -4,7 +4,7 @@ on:
     branches:    
       - master
     paths:
-      - 'test/node/**'
+      - 'test/node/managed-ng-**.yml'
 name: deploy
 jobs:
   deploy:
